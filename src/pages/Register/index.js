@@ -38,23 +38,23 @@ const Register = () => {
           <h1 className='text-2x1 text-primary mt-5 font-bold'>Cadastro de usuário</h1>
           <div className="grid grid-cols-1 w-2/5">
             <div className='flex flex-col mt-5 mb-5'>
-              <label htmlFor='nome' className='text-primary text-md font-bold'>Nome:</label>
-              <input type='text' name='nome' placeholder='Digite seu nome' className='border custom-border-color p-2 rounded-full focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
+              <label htmlFor='nome' className='text-primary text-md font-bold mb-2'>Nome:</label>
+              <input type='text' name='nome' placeholder='Digite seu nome' className='border custom-border-color p-2 rounded-lg focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
             </div>
             <div className='flex flex-col mb-5'>
-              <label htmlFor='email' className='text-primary text-md font-bold'>E-mail:</label>
-              <input type='email' name='email' placeholder='Digite seu e-mail' className='border custom-border-color p-2 rounded-full focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
+              <label htmlFor='email' className='text-primary text-md font-bold mb-2'>E-mail:</label>
+              <input type='email' name='email' placeholder='Digite seu e-mail' className='border custom-border-color p-2 rounded-lg focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
             </div>
             <div className='flex flex-col mb-5'>
-              <label htmlFor='senha' className='text-primary text-md font-bold'>Senha:</label>
-              <input type='password' name='senha' placeholder='Digite sua senha' className='border custom-border-color p-2 rounded-full focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
+              <label htmlFor='senha' className='text-primary text-md font-bold mb-2'>Senha:</label>
+              <input type='password' name='senha' placeholder='Digite sua senha' className='border custom-border-color p-2 rounded-lg focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
             </div>
             <div className='flex flex-col mb-5'>
-              <label htmlFor='imagem' className='text-primary text-md font-bold'>Imagem:</label>
-              <input type='text' name='imagem' placeholder='Insira a URL da imagem' className='border custom-border-color p-2 rounded-full focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
+              <label htmlFor='imagem' className='text-primary text-md font-bold mb-2'>Imagem:</label>
+              <input type='text' name='imagem' placeholder='Insira a URL da imagem' className='border custom-border-color p-2 rounded-lg focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl' onChange={handleChangeValues} />
             </div>
           </div>
-          <button type='submit' className='bg-primary px-6 py-1 font-bold text-secondary rounded-full transition duration-700 hover:scale-105 mb-10'>Cadastrar</button>
+          <button type='submit' className='text-xs uppercase bg-primary px-4 py-2 font-bold text-secondary rounded-lg transition duration-700 hover:scale-105 mb-10'>Cadastrar</button>
         </form>
       </div>
     </main>
