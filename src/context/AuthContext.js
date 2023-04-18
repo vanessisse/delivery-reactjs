@@ -7,13 +7,13 @@ const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     const { userLogged, userFull, loading, loginUser, logoutUser } = useAuth();
 
-    if(loading) {
+    if (loading) {
         return <h1>Loading</h1>
     }
 
     return (
         <AuthContext.Provider value={{ userLogged, userFull, loginUser, logoutUser }}>
-            {children}
+            { children }
         </AuthContext.Provider>
     )
 }

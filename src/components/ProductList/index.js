@@ -29,8 +29,6 @@ const ProductList = () => {
                 {products.map(product => (
                     <Product key={product._id} product={product} />
                 ))}
-                {/* <Product />
-                <Product /> */}
             </div>
         </section >
     )

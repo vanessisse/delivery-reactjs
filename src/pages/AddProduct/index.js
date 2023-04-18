@@ -22,15 +22,19 @@ const AddProduct = () => {
   }, [])
 
   const getCategories = async () => {
-    const response = await findAllCategories();
-    const categoriesSelect = response.data.map((categoria) => {
-      return {
-        value: categoria._id,
-        label: categoria.nome
-      }
-    })
-    setCategories(categoriesSelect);
-  }
+    try {
+      const response = await findAllCategories();
+      const categoriesSelect = response.data.map((categoria) => {
+        return {
+          value: categoria._id,
+          label: categoria.nome,
+        };
+      });
+      setCategories(categoriesSelect);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleChangeValues = (evento) => {
     setProductForm({
@@ -58,7 +62,7 @@ const AddProduct = () => {
 
     console.log(response);
     if (response.data) {
-      alert(`Produto ${response.data.nome} cadastrado com sucesso !`)
+      alert(`${response.data.nome} cadastrado com sucesso!`)
       navigate('/admin')
     }
 
@@ -134,7 +138,7 @@ const AddProduct = () => {
             name="imagem"
             placeholder="Insira a URL da imagem do produto"
             required
-            className='border custom-border-color p-2 rounded-lg focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl"'
+            className='border custom-border-color p-2 rounded-lg focus:ring-1 focus:outline-none transition duration-300 focus:shadow-xl'
           />
 
           <label htmlFor="title" className="text-primary text-md font-bold mb-2">

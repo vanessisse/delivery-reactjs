@@ -21,8 +21,8 @@ const NavBar = () => {
                 {userLogged ? (
                     <div className='flex items-center justify-end space-x-6'>
                         <div className='relative flex cursor-pointer'>
-                            <span className='bg-secondary w-4 h-4 p-1 rounded-full flex items-center justify-center text-white absolute -right-2 -top-2'></span>
-                            <FaShoppingCart className='text-primary w-6 h-6 cursor-pointer' />
+                            <span className='bg-secondary w-4 h-4 p-1 rounded-full flex items-center justify-center text-white absolute -right-2 -top-2'>2</span>
+                            <FaShoppingCart className='text-primary w-6 h-6 cursor-pointer' onClick={() => navigate('/cart')} />
                         </div>
                         <p className='text-black'>Bem-vindo(a), {userFull?.nome}!</p>
                         <img src={userFull?.imagem} className='w-10 h-10 rounded-full' alt='imagem do usuário' />

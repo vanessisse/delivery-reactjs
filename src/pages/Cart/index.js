@@ -30,6 +30,13 @@ const Cart = () => {
     const filterCart = storageCart.filter((product) => product._id !== id);
     localStorage.setItem('productCart', JSON.stringify(filterCart));
     setProductsCart(filterCart);
+    setAddress({
+      rua: '',
+      numero: '',
+      complemento: '',
+      cep: ''
+    });
+    setTotalValue(0);
   }
 
   const findAddress = async () => {
@@ -152,7 +159,7 @@ const Cart = () => {
                   <span className="flex-grow text-primary text-md font-semibold">
                     Total
                   </span>
-                  <span className="poppins font-semibold text-black">
+                  <span className="poppins text-md font-semibold text-black">
                     R${totalValue}
                   </span>
                 </div>
@@ -160,12 +167,12 @@ const Cart = () => {
                   <span className="flex-grow text-primary text-md font-semibold">
                     Taxa de entrega
                   </span>
-                  <span className="poppins font-semibold text-black">
+                  <span className="poppins text-md font-semibold text-black">
                     5
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <span className="flex-grow text-primary text-md font-semibold">
+                  <span className="flex-grow text-primary text-xl font-semibold">
                     Total + taxa
                   </span>
                   <span className="poppins font-semibold text-black text-xl">
@@ -174,11 +181,8 @@ const Cart = () => {
                 </div>
                 <div className="flex flex-col space-y-2">
                   <p className="poppins text-primary text-md font-semibold">Endereço de entrega:</p>
-                  <span className="font-semibold text-black">
-                    {address.rua}
-                  </span>
-                  <span className="text-primary text-md font-semibold">
-                    Número: {address.numero} - Complemento: {address.complemento}
+                  <span className="text-md text-black">
+                    {address.rua}, n° {address.numero} - {address.complemento}
                   </span>
                 </div>
                 <div className='flex items-center justify-center'>
