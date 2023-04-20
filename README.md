@@ -30,13 +30,13 @@
 
 1. Faça o download deste repositório e do repositório back-end (https://github.com/vanessisse/marketplace-nodejs);
 
-2. No VS Code, abra a pasta do back-end e no terminal (`CTRL + '`) execute o comando `npm i` para instalar as dependências;
+2. No VS Code, abra a pasta do back-end e, no terminal (`CTRL + '`), execute o comando `npm i` para instalar as dependências;
 
 3. Inicie o servidor back-end executando `npm start`. Ele deve estar disponível em http://localhost:3000;
 
-4. Abra a pasta do front-end e no terminal execute o comando `npm i` e, em seguida, `npm start` para iniciar o servidor front-end. Ele deve estar disponível em http://localhost:3001;
+4. Abra a pasta do front-end e execute no terminal o comando `npm i`. Em seguida, inicie o servidor com `npm start`. Ele deve estar disponível em http://localhost:3001;
 
-5. Com ambos os servidores em execução, você deve ser capaz de acessar a aplicação em seu navegador através do endereço http://localhost:3001.
+5. Com ambos os servidores rodando, acesse a aplicação no seu navegador através do endereço http://localhost:3001.
 
 ## :tada: Agradecimento
 
