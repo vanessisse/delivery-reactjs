@@ -9,6 +9,7 @@ const Cart = () => {
   const navigate = useNavigate();
   const [productsCart, setProductsCart] = useState([]);
   const [totalValue, setTotalValue] = useState(0);
+  const [taxa, setTaxa] = useState(5);
   const [address, setAddress] = useState({
     rua: '',
     numero: '',
@@ -20,9 +21,12 @@ const Cart = () => {
     const storageCart = JSON.parse(localStorage.getItem('productCart'));
     setProductsCart(storageCart);
     const total = storageCart.reduce((valor, product) => {
-      return valor + product.precoUnitario;
+      return valor + (product.precoUnitario * product.quantity);
     }, 0)
     setTotalValue(total);
+    if (storageCart.length === 0) {
+      setTaxa(0);
+    }
   }, [])
 
   const remove = (id) => {
@@ -30,13 +34,13 @@ const Cart = () => {
     const filterCart = storageCart.filter((product) => product._id !== id);
     localStorage.setItem('productCart', JSON.stringify(filterCart));
     setProductsCart(filterCart);
-    setAddress({
-      rua: '',
-      numero: '',
-      complemento: '',
-      cep: ''
-    });
-    setTotalValue(0);
+    const total = filterCart.reduce((valor, product) => {
+      return valor + (product.precoUnitario * product.quantity);
+    }, 0)
+    setTotalValue(total);
+    if (filterCart.length === 0) {
+      setTaxa(0);
+    }
   }
 
   const findAddress = async () => {
@@ -48,6 +52,10 @@ const Cart = () => {
   }
 
   const sendOrder = async () => {
+    if (productsCart.length === 0) {
+      alert('Seu carrinho está vazio!');
+      return;
+    }
     const productsOrder = productsCart.map((product) => {
       return {
         _id: product._id,
@@ -57,7 +65,7 @@ const Cart = () => {
     const cartInfo = {
       produtos: productsOrder,
       precoTotal: totalValue,
-      frete: 5
+      frete: taxa
     }
 
     const response = await sendCart(cartInfo);
@@ -168,7 +176,7 @@ const Cart = () => {
                     Taxa de entrega
                   </span>
                   <span className="poppins text-md font-semibold text-black">
-                    5
+                    {taxa}
                   </span>
                 </div>
                 <div className="flex items-center">
@@ -176,15 +184,16 @@ const Cart = () => {
                     Total + taxa
                   </span>
                   <span className="poppins font-semibold text-black text-xl">
-                    R${totalValue + 5}
+                    R${totalValue + taxa}
                   </span>
                 </div>
+                {address.numero && (
                 <div className="flex flex-col space-y-2">
                   <p className="poppins text-primary text-md font-semibold">Endereço de entrega:</p>
                   <span className="text-md text-black">
-                    {address.rua}, n° {address.numero} - {address.complemento}
+                    {address.rua}, n° {address.numero}, {address.complemento}, CEP: {address.cep}
                   </span>
-                </div>
+                </div>)}
                 <div className='flex items-center justify-center'>
                   <button onClick={sendOrder} className="text-xs uppercase bg-primary px-4 py-2 font-bold text-secondary rounded-lg transition duration-700 hover:scale-105 mt-2">
                     Enviar Pedido

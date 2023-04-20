@@ -8,7 +8,8 @@ const Register = () => {
     nome: '',
     email: '',
     senha: '',
-    imagem: ''
+    imagem: '',
+    admin: false
   })
 
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const Register = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(inputValues);
     const response = await registerUser(inputValues);
     if (response.data) {
       alert(`${response.data.nome} cadastrado com sucesso!`)
