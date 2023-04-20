@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+## :spaghetti: Delivery React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>Este é um projeto de entrega de comidas desenvolvido na finalização do módulo de Front-end do curso de Desenvolvimento Full Stack da iTalents, seguindo as orientações transmitidas nas aulas do professor Ivo Soares. As interfaces foram criadas utilizando a biblioteca React.js e suas dependências, incluindo ReactDOM, React Router DOM, React Icons, React MultiSelect Component e Axios. A estilização dos componentes e páginas foi feita com o uso do Tailwind CSS. Todas as operações CRUD (Create, Read, Update e Delete) são suportadas. A aplicação se integra à API Marketplace, a qual faz a conexão com o banco de dados MongoDB. Essa API foi construída durante o módulo de Back-end Development e pode ser encontrada no seguinte repositório: https://github.com/vanessisse/marketplace-nodejs.
 
-## Available Scripts
 
-In the project directory, you can run:
+| Pacote/Biblioteca | Descrição  |
+| ----------------- | ------------------------------------------------------------|
+| React.js | Biblioteca JavaScript para construir interfaces de usuário |
+| ReactDOM  | Pacote que fornece métodos específicos para DOM do React |
+| React Router DOM | Biblioteca de roteamento para aplicativos React |                                                                                              |
+| React Icons | Biblioteca de ícones para React |
+| React MultiSelect | Componente React para seleção de múltiplas opções |
+| Axios | Biblioteca para fazer requisições HTTP |
+| Tailwind CSS | Framework CSS para estilização de páginas web |
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## :rocket: Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+– Cadastro de usuários;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+– Login;
 
-### `npm run build`
+– Cadastro, edição e remoção de produtos do banco de dados;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+– Adição e exclusão de produtos do carrinho de compras.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :computer: Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+1. Faça o download deste repositório e do repositório back-end (https://github.com/vanessisse/marketplace-nodejs);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. No VS Code, abra a pasta do back-end e no terminal (`CTRL + '`) execute o comando `npm i` para instalar as dependências;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Inicie o servidor back-end executando `npm start`. Ele deve estar disponível em http://localhost:3000;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Abra a pasta do front-end e no terminal execute o comando `npm i` e, em seguida, `npm start` para iniciar o servidor front-end. Ele deve estar disponível em http://localhost:3001;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Com ambos os servidores em execução, você deve ser capaz de acessar a aplicação em seu navegador através do endereço http://localhost:3001.
 
-## Learn More
+## :tada: Agradecimento
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Agradeço, com muito carinho, aos professores Maria Eduarda Cardoso, Leonardo Orabona e Ivo Soares por terem compartilhado seus conhecimentos e por terem sido fontes de inspiração durante todo o meu aprendizado. Sou grata a toda a equipe da iTalents pela oportunidade de me desenvolver e pela confiança em meu potencial!
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estou animada para continuar acompanhando o crescimento e o sucesso de todos e espero que possamos trabalhar juntos no futuro!
